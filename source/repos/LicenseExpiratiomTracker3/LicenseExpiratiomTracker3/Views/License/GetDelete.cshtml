@@ -1,0 +1,81 @@
+﻿@model LicenseExpiratiomTracker3.Models.License
+@{
+    ViewData["Title"] = "Delete";
+}
+
+@*<form method="post" asp-action="Delete">
+    <input asp-for="id" hidden />
+    <div class="border p-3">
+        <div class="form-group row">
+            <h2 class="text-black-50 pl-3">Delete License</h2>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="form-group row">
+                    <div class="col-4">
+                        <label asp-for="title"></label>
+                    </div>
+                    <div class="col-4">
+                        <label asp-for="startedAt"></label>
+                    </div>
+                    <div class="col-4">
+                        <label asp-for="endingAt"></label>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-4">
+                        <input asp-for="title" disabled class="form-control" />
+                    </div>
+                    <div class="col-4">
+                        <input asp-for="startedAt" disabled class="form-control" />
+                    </div>
+                    <div class="col-4">
+                        <input asp-for="endingAt" disabled class="form-control" />
+                    </div>
+                </div>
+                <div class="form-group row mt-3">
+                    <div class="col-8 offset-2 row">
+                        <div class="col">
+                            <input type="submit" class="btn btn-danger w-75" value="Delete" />
+                        </div>
+                        <div class="col">
+                            <a asp-action="Index" class="btn btn-success w-75">Back</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</form>*@
+
+<h3>Are you sure you want to delete this license?</h3>
+<form method="post" asp-action="Delete">
+    <input asp-for="id" hidden />
+    <div class="mb-3">
+        <label asp-for="title" class="form-label">License title:</label>
+        <input asp-for="title" type="text" disabled class="form-control" id="title">
+        <span asp-validation-for="title" class="text-danger"></span>
+    </div>
+    <div class="mb-3">
+        <label asp-for="startedAt" class="form-label">Started At:</label>
+        <input type="date" asp-for="startedAt" disabled class="form-control" id="startedAt">
+        <span asp-validation-for="startedAt" class="text-danger"></span>
+    </div>
+    <div class="mb-3">
+        <label asp-for="endingAt" class="form-label">Ending At:</label>
+        <input type="date" asp-for="endingAt" disabled class="form-control" id="endingAt">
+        <span asp-validation-for="endingAt" class="text-danger"></span>
+    </div>
+    <div class="form-group row mt-3">
+        <div class="col-8 offset-2 row">
+            <div class="col">
+                <input type="submit" class="btn btn-outline-success w-75" value="Update" />
+            </div>
+            <div class="col">
+                <a asp-action="Index" class="btn btn-outline-danger w-75">Back</a>
+            </div>
+        </div>
+    </div>
+</form>
+

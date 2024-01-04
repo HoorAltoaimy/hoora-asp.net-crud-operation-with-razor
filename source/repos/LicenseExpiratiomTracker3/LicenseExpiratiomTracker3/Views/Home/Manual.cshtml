@@ -1,0 +1,30 @@
+﻿@{
+    ViewData["Title"] = "User's Manual";
+}
+
+<h1 class="mb-3">@ViewData["Title"]</h1>
+
+<h5 class="mb-5">This webpage is built to track the licenses and certificates expiration, to manage the subscriptions before service-cutting.</h5>
+
+<h5>Color indications</h5>
+@*<ul>
+    <li>White background: There is more than a month left until the expiration date.</li>
+    <li>Yellow background: There is one month or less left until the expiration date.</li>
+    <li>Red background: There is one week or less left until the expiration date.</li>
+    <li>Grey background: The license is already expired.</li>
+</ul>*@
+
+<table class="table table-bordered">
+    <tr class="table">
+        <td>There is more than a month left until the expiration date.</td>
+    </tr>
+    <tr class="table-warning">
+        <td>There is one month or less left until the expiration date.</td>
+    </tr>
+    <tr class="table-danger">
+        <td>There is one week or less left until the expiration date.</td>
+    </tr>
+    <tr class="table-secondary">
+        <td>The license is already expired.</td>
+    </tr>
+</table>
